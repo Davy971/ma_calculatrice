@@ -15,6 +15,8 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class HistoryActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     @Override
@@ -33,9 +35,11 @@ public class HistoryActivity extends AppCompatActivity implements AdapterView.On
                 data.add(ligne);
             }
             fin.close();
+           // MonAdapteur adapter= new MonAdapteur(this,R.layout.item,l);
             ArrayAdapter matching = new ArrayAdapter(this, android.R.layout.simple_list_item_1, data);
             ListView listview_calcul = (ListView) findViewById(R.id.list_calcul);
             listview_calcul.setAdapter(matching);
+           // listview_calcul.setAdapter(adapter);
             listview_calcul.setOnItemClickListener(this);
 
             //appliquer sur chaque item un listener
