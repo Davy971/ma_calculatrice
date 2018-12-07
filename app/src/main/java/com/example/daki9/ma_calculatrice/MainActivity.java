@@ -20,22 +20,31 @@ import javax.script.ScriptException;
 public class MainActivity extends AppCompatActivity {
     ScriptEngine engine;
     String currentText;
-
+    String result_calcul;
+    private DatabaseManager databaseManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         engine= new ScriptEngineManager().getEngineByName("rhino");
         TextView txtCalcul=(TextView)findViewById(R.id.txtCalcul);
+        TextView txtResult=(TextView)findViewById(R.id.txtResult);
+        databaseManager= new DatabaseManager( this );
+
+
         Intent inte = getIntent();
-        String calcul = inte.getStringExtra("CALCUL");
-        if(calcul !=null)
+        String formule = inte.getStringExtra("Formule");
+        String resultat = inte.getStringExtra("Resultat");
+        if(formule !=null && resultat!=null)
         {
-            txtCalcul.setText(calcul);
+            txtCalcul.setText(formule);
+            txtResult.setText(resultat);
         }
         if(savedInstanceState!=null)
         {
-           txtCalcul.setText(savedInstanceState.getString("param"));
+           txtCalcul.setText(savedInstanceState.getString("param1"));
+           txtResult.setText(savedInstanceState.getString("param2"));
+
         }
     }
 
@@ -90,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
         TextView txtCalcul=(TextView)findViewById(R.id.txtCalcul);
         TextView txtResult=(TextView)findViewById(R.id.txtResult);
         double  result=0;
-        String result_calcul;
         currentText= txtCalcul.getText().toString();
         try
         {
@@ -100,15 +108,7 @@ public class MainActivity extends AppCompatActivity {
         }
         result_calcul=""+result;
         txtResult.setText(result_calcul);
-        try {
-            FileOutputStream fout = openFileOutput("monFichier.txt", Context.MODE_APPEND);
-            OutputStreamWriter out = new OutputStreamWriter(fout);
-            out.write(txtCalcul.getText().toString()+"\n");
-            out.close();
-        }catch (Exception e)
-        {
-            Toast.makeText(this,"FileException Raised",Toast.LENGTH_SHORT).show();
-        }
+        databaseManager.insertCalcul(currentText,result_calcul);
     }
     public void btnHist(View view)
     {
@@ -120,7 +120,11 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onSaveInstanceState(savedInstanceState);
         TextView txtCalcul=(TextView)findViewById(R.id.txtCalcul);
+        TextView txtResult=(TextView)findViewById(R.id.txtResult);
         currentText= txtCalcul.getText().toString();
-        savedInstanceState.putString("param",currentText);
+        result_calcul= txtResult.getText().toString();
+        savedInstanceState.putString("param1",currentText);
+        savedInstanceState.putString("param2",result_calcul);
+
     }
 }

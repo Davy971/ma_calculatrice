@@ -76,6 +76,7 @@
         android:layout_height="0dp"
         android:text="0"
         android:textAlignment="textEnd"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -87,6 +88,7 @@
         android:layout_height="0dp"
         android:text="0"
         android:textAlignment="textEnd"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -94,10 +96,11 @@
 
     <Button
         android:id="@+id/buttonClear"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/clear"
         android:onClick="btnClear"
+        android:text="@string/clear"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -105,10 +108,11 @@
 
     <Button
         android:id="@+id/buttonDiv"
+        style="@android:style/Widget.DeviceDefault.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/div"
         android:onClick="btn_ajout_caract"
+        android:text="@string/div"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -116,10 +120,11 @@
 
     <Button
         android:id="@+id/buttonMult"
+        style="@android:style/Widget.DeviceDefault.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/mult"
         android:onClick="btn_ajout_caract"
+        android:text="@string/mult"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
@@ -127,10 +132,11 @@
 
     <Button
         android:id="@+id/buttonSuppr"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/suppr"
         android:onClick="btnSuppr"
+        android:text="@string/suppr"
         app:layout_constraintBottom_toBottomOf="@+id/guideline3"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
@@ -138,10 +144,11 @@
 
     <Button
         android:id="@+id/button7"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_7"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_7"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -149,10 +156,11 @@
 
     <Button
         android:id="@+id/button8"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_8"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_8"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -160,10 +168,11 @@
 
     <Button
         android:id="@+id/button9"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_9"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_9"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
@@ -171,10 +180,11 @@
 
     <Button
         android:id="@+id/buttonMoins"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/moins"
         android:onClick="btn_ajout_caract"
+        android:text="@string/moins"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
@@ -182,10 +192,11 @@
 
     <Button
         android:id="@+id/button4"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_4"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_4"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -193,10 +204,11 @@
 
     <Button
         android:id="@+id/button5"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_5"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_5"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -204,10 +216,11 @@
 
     <Button
         android:id="@+id/button6"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_6"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_6"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
@@ -215,10 +228,11 @@
 
     <Button
         android:id="@+id/buttonAdd"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/add"
         android:onClick="btn_ajout_caract"
+        android:text="@string/add"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
@@ -226,10 +240,11 @@
 
     <Button
         android:id="@+id/button1"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_1"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_1"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -237,10 +252,11 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_2"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_2"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -248,10 +264,11 @@
 
     <Button
         android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_3"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_3"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
@@ -259,10 +276,11 @@
 
     <Button
         android:id="@+id/buttonHist"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/history"
         android:onClick="btnHist"
+        android:text="@string/history"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
@@ -270,6 +288,7 @@
 
     <Button
         android:id="@+id/buttonMod"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/mod"
@@ -280,10 +299,11 @@
 
     <Button
         android:id="@+id/button0"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/_0"
         android:onClick="btn_ajout_caract"
+        android:text="@string/_0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -291,10 +311,11 @@
 
     <Button
         android:id="@+id/buttonVirgule"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/virgule"
         android:onClick="btn_ajout_caract"
+        android:text="@string/virgule"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
@@ -302,10 +323,11 @@
 
     <Button
         android:id="@+id/buttonEgal"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/egal"
         android:onClick="btnEgal"
+        android:text="@string/egal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"

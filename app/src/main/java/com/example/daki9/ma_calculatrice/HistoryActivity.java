@@ -1,13 +1,17 @@
 package com.example.daki9.ma_calculatrice;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,47 +20,46 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
-public class HistoryActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+
+public class HistoryActivity extends AppCompatActivity {
+    DatabaseManager databaseManager;
+    ListView listview_calcul;
+    HistoListAdapter adapter;
+    ArrayList<Calcul> les_calculs;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.history_activity);
-        ArrayList<String> data = new ArrayList<String>();
-        try
+        listview_calcul = (ListView) findViewById(R.id.list_calcul);
+        databaseManager=new DatabaseManager( this );
+        creer_liste();
+
+    }
+    /*Créer la liste d'adapter*/
+    private void creer_liste()
+    {
+        les_calculs=databaseManager.read_calcul();
+        if(les_calculs!=null)
         {
-            FileInputStream fin = openFileInput("monFichier.txt");
-            InputStreamReader in = new InputStreamReader(fin);
-            BufferedReader buffer = new BufferedReader(in);
-            String ligne = "";
-            while ((ligne = buffer.readLine()) != null) {
-                data.add(ligne);
-            }
-            fin.close();
-           // MonAdapteur adapter= new MonAdapteur(this,R.layout.item,l);
-            ArrayAdapter matching = new ArrayAdapter(this, android.R.layout.simple_list_item_1, data);
-            ListView listview_calcul = (ListView) findViewById(R.id.list_calcul);
-            listview_calcul.setAdapter(matching);
-           // listview_calcul.setAdapter(adapter);
-            listview_calcul.setOnItemClickListener(this);
+            listview_calcul = (ListView) findViewById(R.id.list_calcul);
+            adapter= new HistoListAdapter(this,les_calculs);
+            listview_calcul.setAdapter(adapter);
 
-            //appliquer sur chaque item un listener
-        }catch (Exception e){
-
-            Toast.makeText(this,"FileException Raised",Toast.LENGTH_SHORT).show();
         }
 
     }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        TextView texte=(TextView) view;
-        Intent mainActivity = new Intent (HistoryActivity.this,MainActivity.class);
-        mainActivity.putExtra("CALCUL", texte.getText().toString());
-        startActivity(mainActivity);
+    public void delAll(View view) {
+        databaseManager.delete_all_calcul();
+        les_calculs.clear();
+        adapter.notifyDataSetChanged();
     }
+
+
+
+
 }
 
 
