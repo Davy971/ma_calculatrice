@@ -24,4 +24,7 @@
     <string name="ouvert">(</string>
     <string name="Fermer">)</string>
     <string name="mult">*</string>
+
+    <string name="Graphic">Mode Graphique</string>
+    <string name="tosuprim">toSuprim</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.example.daki9.ma_calculatrice;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.ContactsContract;
@@ -73,13 +75,25 @@ public class HistoListAdapter extends BaseAdapter {
         holder.btnEnvoi.setTag(position);
         //click sur la croix pour supprimer
         holder.btnSup.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                int position = (int) v.getTag();
-                //demande de suppression
-                databaseManager.delete_calcul(lesCalculs.get(position));
-                lesCalculs.remove(lesCalculs.get(position));
-                //rafraichir
-                notifyDataSetChanged();
+            public void onClick(final View v) {
+                new AlertDialog.Builder(moncontext)
+                .setTitle("Supprimer ce calcul")
+                .setMessage("Voulez-vous vraiment supprimer ce calcul")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        int position = (int) v.getTag();
+                        //demande de suppression
+                        databaseManager.delete_calcul(lesCalculs.get(position));
+                        lesCalculs.remove(lesCalculs.get(position));
+                        //rafraichir
+                        notifyDataSetChanged();
+                    }
+                }).setNegativeButton("Non",null).show();
+
+
+
 
             }
         });
