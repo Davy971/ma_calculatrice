@@ -11,49 +11,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.10" />
+        app:layout_constraintGuide_percent="0.12" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20" />
+        app:layout_constraintGuide_percent="0.24" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.33" />
+        app:layout_constraintGuide_percent="0.36" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.46" />
+        app:layout_constraintGuide_percent="0.49" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.59" />
+        app:layout_constraintGuide_percent="0.62" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.72" />
+        app:layout_constraintGuide_percent="0.74" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline6.5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.87" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline7"
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50093806" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline9"
@@ -81,7 +81,7 @@
         android:id="@+id/txtCalcul"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -92,7 +92,7 @@
         android:layout_width="0dp"
         android:layout_height="34dp"
         android:text="0"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -106,7 +106,7 @@
         android:onClick="btnClear"
         android:text="@string/clear"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -120,7 +120,7 @@
         android:onClick="btn_ajout_caract"
         android:text="@string/div"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -134,24 +134,24 @@
         android:onClick="btn_ajout_caract"
         android:text="@string/mult"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/guideline2" />
 
-    <Button
+    <ImageButton
         android:id="@+id/buttonSuppr"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+        style="@android:style/Widget.DeviceDefault.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="btnSuppr"
-        android:text="@string/suppr"
-        android:textColor="@color/colorPrimaryDark"
+        android:tint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="@+id/guideline3"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline2" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:srcCompat="@android:drawable/ic_input_delete" />
 
     <Button
         android:id="@+id/button7"
@@ -160,6 +160,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_7"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -172,6 +173,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_8"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -184,6 +186,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_9"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
@@ -197,7 +200,7 @@
         android:onClick="btn_ajout_caract"
         android:text="@string/moins"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
@@ -210,6 +213,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_4"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -222,6 +226,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_5"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -234,6 +239,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_6"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
@@ -247,7 +253,7 @@
         android:onClick="btn_ajout_caract"
         android:text="@string/add"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
@@ -260,6 +266,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_1"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -272,6 +279,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_2"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -284,10 +292,13 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_3"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/guideline5" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonOuvert"
@@ -297,7 +308,7 @@
         android:onClick="btn_ajout_caract"
         android:text="@string/ouvert"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
@@ -309,6 +320,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/mod"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -321,6 +333,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/_0"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6.5"
         app:layout_constraintLeft_toRightOf="@+id/guideline7"
         app:layout_constraintRight_toLeftOf="@+id/guideline8"
@@ -333,6 +346,7 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/virgule"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6.5"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toLeftOf="@+id/guideline9"
@@ -345,12 +359,12 @@
         android:layout_height="0dp"
         android:onClick="btn_ajout_caract"
         android:text="@string/Fermer"
-        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6.5"
         app:layout_constraintLeft_toRightOf="@+id/guideline9"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline6"
-        android:textColor="@color/colorPrimaryDark" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline6" />
 
     <Button
         android:id="@+id/buttonHist"
@@ -360,7 +374,7 @@
         android:onClick="btnHist"
         android:text="@string/history"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
@@ -368,13 +382,13 @@
 
     <Button
         android:id="@+id/buttonEgal"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="btnEgal"
         android:text="@string/egal"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/guideline8"
         app:layout_constraintRight_toRightOf="parent"

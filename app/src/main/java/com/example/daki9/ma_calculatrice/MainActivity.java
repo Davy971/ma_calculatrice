@@ -56,14 +56,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    @Override
-//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-//        super.onRestoreInstanceState(savedInstanceState);
-//
-//        TextView txtCalcul=(TextView)findViewById(R.id.txtCalcul);
-//        currentText = savedInstanceState.getString("param", "");
-//        txtCalcul.setText(currentText);
-//    }
 
     public void btnClear(View view) {
         TextView txtCalcul=(TextView)findViewById(R.id.txtCalcul);
@@ -94,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         int count2=0;
 
         String txt = txtCalcul.getText().toString() + texte.getText().toString();
-        if( txt.matches("^(-?\\(+)*-?(\\d*|\\d+(\\.\\d*)?)\\)*(\\d\\)*(([+\\-]|[*/]-?)(\\(-?)*(\\d*|\\d+(\\.\\d*)?))?)*$")) {
+        if( txt.matches("^(-?\\(+)*-?(\\d*|\\d+(\\.\\d*)?)([^)]\\d\\)*(([+\\-]|[*/]-?)(\\(-?)*(\\d*|\\d+(\\.\\d*)?))?)*$")) {
             if(texte.getText().toString().equals(")"))
             {
 
@@ -180,16 +172,26 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     text=result.get(0);
                     text=text.replace("x","*");
-                    txtCalcul.setText(text);
-                    try
+                    text=text.replace(" ","");
+                    text=text.replace(",",".");
+                    if(text.matches("^(-?\\(+)*-?(\\d*|\\d+(\\.\\d*)?)([^)]\\d\\)*(([+\\-]|[*/]-?)(\\(-?)*(\\d*|\\d+(\\.\\d*)?))?)*$"))
                     {
-                        resu=(double)engine.eval(text);
-                    }catch (Exception e){
-                        Toast.makeText(this,"Exception Raised",Toast.LENGTH_SHORT).show();
+                        txtCalcul.setText(text);
+                        try
+                        {
+                            resu=(double)engine.eval(text);
+                        }catch (Exception e){
+                            Toast.makeText(this,"Exception Raised",Toast.LENGTH_SHORT).show();
+                        }
+
+                        result_calcul=""+resu;
+                        txtResult.setText(result_calcul);
+                        databaseManager.insertCalcul(text,result_calcul);
                     }
-                    result_calcul=""+resu;
-                    txtResult.setText(result_calcul);
-                    databaseManager.insertCalcul(text,result_calcul);
+                    else {
+                        Toast.makeText(this,text, Toast.LENGTH_SHORT).show();
+                    }
+
 
                 }
                 break;
