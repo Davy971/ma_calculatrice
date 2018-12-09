@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".GraphicActivity"></activity>
     </application>
 
 </manifest>
