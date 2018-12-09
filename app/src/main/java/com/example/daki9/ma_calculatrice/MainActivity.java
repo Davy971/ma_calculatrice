@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void btnEgal(View view) throws ScriptException
+    public void btnEgal(View view)
     {
         TextView txtCalcul=(TextView)findViewById(R.id.txtCalcul);
         TextView txtResult=(TextView)findViewById(R.id.txtResult);

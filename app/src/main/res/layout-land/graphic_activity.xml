@@ -31,49 +31,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.40" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.40" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.64" />
+        app:layout_constraintGuide_percent="0.56" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.73" />
+        app:layout_constraintGuide_percent="0.67" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.82" />
+        app:layout_constraintGuide_percent="0.78" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.91" />
+        app:layout_constraintGuide_percent="0.89" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_8"
@@ -104,7 +104,7 @@
         android:onClick="btnClear_G"
         android:text="@string/clear"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="12sp"
+        android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline_8"
@@ -318,7 +318,7 @@
         android:onClick="cos_G"
         android:text="Cos(x)"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="10sp"
+        android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline_8"
@@ -345,7 +345,7 @@
         android:onClick="sin_G"
         android:text="sin(x)"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="10sp"
+        android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/guideline_9"
         app:layout_constraintRight_toLeftOf="@+id/guideline_10"

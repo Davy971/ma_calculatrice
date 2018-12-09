@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.daki9.ma_calculatrice">
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HistoryActivity"></activity>
-        <activity android:name=".GraphicActivity"></activity>
+        <activity android:name=".GraphicActivity" ></activity>
     </application>
 
 </manifest>
