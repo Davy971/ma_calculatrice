@@ -186,19 +186,20 @@ public class MainActivity extends AppCompatActivity {
                         try
                         {
                             resu=(double)engine.eval(text);
-                        }catch (Exception e){
-                            txtResult.setText("Erreur");
-                            Toast.makeText(this,"Exception Raised",Toast.LENGTH_SHORT).show();
-                        }
-                        if(!txtResult.getText().toString().equals("Erreur")) {
                             result_calcul = "" + resu;
                             txtResult.setText(result_calcul);
                             databaseManager.insertCalcul(text, result_calcul);
+                        }catch (Exception e){
+                            txtCalcul.setText("Erreur");
+                            txtResult.setText("Erreur");
+                            Toast.makeText(this,"Exception Raised",Toast.LENGTH_SHORT).show();
                         }
+
                     }
                     else {
+                        txtCalcul.setText("Erreur");
                         txtResult.setText("Erreur");
-                        Toast.makeText(this,"Exceptin Raised", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this,"Mauvaise Expression", Toast.LENGTH_SHORT).show();
 
                     }
 
